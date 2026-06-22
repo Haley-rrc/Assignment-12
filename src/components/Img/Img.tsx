@@ -22,7 +22,7 @@ const StyledImg = styled.img<ImgProps>`
 
 // Img component
 function Img({
-  src = 'https://via.placeholder.com/300x180',
+  src = 'https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg',
   alt = 'Sample image',
   backgroundColor = '#ffffff',
   disabled = false,

@@ -48,7 +48,7 @@ const HeroSubtitle = styled.p`
 function HeroImage({
   title = 'Hero Image',
   subtitle = 'This is a hero image component.',
-  imageUrl = 'https://via.placeholder.com/900x400',
+  imageUrl = 'https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg',
   backgroundColor = '#333333',
   disabled = false,
 }: HeroImageProps) {

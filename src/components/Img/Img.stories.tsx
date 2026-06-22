@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Img>;
 // Default Img story
 export const Default: Story = {
   args: {
-    src: 'https://via.placeholder.com/300x180',
+    src: 'https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg/50x50',
     alt: 'Default image',
     backgroundColor: '#ffffff',
     disabled: false,
@@ -33,7 +33,7 @@ export const Default: Story = {
 // Disabled Img story
 export const Disabled: Story = {
   args: {
-    src: 'https://via.placeholder.com/300x180',
+    src: 'https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg/50x50',
     alt: 'Disabled image',
     backgroundColor: '#ffffff',
     disabled: true,
