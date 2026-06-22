@@ -1,0 +1,46 @@
+/* main page style */
+.app {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* page title */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* intro text */
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* each component group */
+.component-section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* section title */
+.component-section h2 {
+  margin-top: 0;
+}
+
+/* responsive layout */
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .component-section {
+    padding: 15px;
+  }
+}
