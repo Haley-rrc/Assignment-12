@@ -1,2 +1,2 @@
 // run Img tests
-import "./Img.tests";
+import './Img.tests';

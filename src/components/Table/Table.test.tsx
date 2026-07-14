@@ -1,2 +1,2 @@
 // run Table tests
-import "./Table.tests";
+import './Table.tests';

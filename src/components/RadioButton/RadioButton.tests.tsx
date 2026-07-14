@@ -1,25 +1,25 @@
 // import testing tools
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
 
 // import RadioButton component
-import RadioButton from "./RadioButton";
+import RadioButton from './RadioButton';
 
-describe("RadioButton Component", () => {
+describe('RadioButton Component', () => {
   // test if RadioButton shows on the page
-  test("renders radio button on the screen", () => {
+  test('renders radio button on the screen', () => {
     render(<RadioButton label="Test Radio" />);
 
-    const radioElement = screen.getByText("Test Radio");
+    const radioElement = screen.getByText('Test Radio');
 
     expect(radioElement).toBeInTheDocument();
   });
 
   // test if disabled RadioButton background turns gray
-  test("changes background color when disabled", () => {
+  test('changes background color when disabled', () => {
     render(<RadioButton label="Disabled Radio" disabled />);
 
-    const radioElement = screen.getByTestId("radio-wrapper");
+    const radioElement = screen.getByTestId('radio-wrapper');
 
-    expect(radioElement).toHaveStyleRule("background-color", "#cccccc");
+    expect(radioElement).toHaveStyleRule('background-color', '#cccccc');
   });
 });

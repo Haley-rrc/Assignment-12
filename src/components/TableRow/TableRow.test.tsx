@@ -1,2 +1,2 @@
 // run TableRow tests
-import "./TableRow.tests";
+import './TableRow.tests';

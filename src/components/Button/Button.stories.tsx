@@ -1,25 +1,25 @@
 // Storybook needed
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 // import Button
-import Button from "./Button";
+import Button from './Button';
 
 const meta: Meta<typeof Button> = {
   // Storybook menu shows
-  title: "Components/Button",
+  title: 'Components/Button',
 
   // what to display(button)
   component: Button,
 
   argTypes: {
     label: {
-      control: "text",
+      control: 'text',
     },
     backgroundColor: {
-      control: "color",
+      control: 'color',
     },
     disabled: {
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };
@@ -31,8 +31,8 @@ type Story = StoryObj<typeof Button>;
 // defult
 export const Default: Story = {
   args: {
-    label: "Click Me",
-    backgroundColor: "#007bff",
+    label: 'Click Me',
+    backgroundColor: '#007bff',
     disabled: false,
   },
 };
@@ -40,8 +40,8 @@ export const Default: Story = {
 // disable
 export const Disabled: Story = {
   args: {
-    label: "Disabled Button",
-    backgroundColor: "#007bff",
+    label: 'Disabled Button',
+    backgroundColor: '#007bff',
     disabled: true,
   },
 };

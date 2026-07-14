@@ -1,2 +1,2 @@
 // export TableFooter component
-export { default } from "./TableFooter";
+export { default } from './TableFooter';

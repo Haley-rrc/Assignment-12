@@ -13,9 +13,9 @@ import {
   Img,
   HeroImage,
   Card,
-} from "./components";
+} from './components';
 
-import "./App.css";
+import './App.css';
 
 // main app page
 function App() {
@@ -24,8 +24,7 @@ function App() {
       <h1>Assignment 12: Web Component Library</h1>
 
       <p className="intro">
-        This page shows the React component library built with Storybook and
-        styled-components.
+        This page shows the React component library built with Storybook and styled-components.
       </p>
 
       <section className="component-section">
@@ -39,10 +38,7 @@ function App() {
 
         <Label text="Disabled Label" disabled />
 
-        <Text
-          text="This is a normal text component."
-          backgroundColor="#f8f9fa"
-        />
+        <Text text="This is a normal text component." backgroundColor="#f8f9fa" />
 
         <Text text="This text component is disabled." disabled />
       </section>
@@ -66,25 +62,15 @@ function App() {
 
         <Img alt="Disabled image" disabled />
 
-        <HeroImage
-          title="Hero Image"
-          subtitle="This is the hero image component."
-        />
+        <HeroImage title="Hero Image" subtitle="This is the hero image component." />
 
-        <HeroImage
-          title="Disabled Hero Image"
-          subtitle="This hero image is disabled."
-          disabled
-        />
+        <HeroImage title="Disabled Hero Image" subtitle="This hero image is disabled." disabled />
       </section>
 
       <section className="component-section">
         <h2>Card Component</h2>
 
-        <Card
-          title="Default Card"
-          content="This is a reusable card component."
-        />
+        <Card title="Default Card" content="This is a reusable card component." />
 
         <Card title="Disabled Card" content="This card is disabled." disabled />
       </section>
