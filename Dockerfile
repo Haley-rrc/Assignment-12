@@ -1,29 +1,39 @@
-# Use Node to build the React app
+# Build the React production application
 FROM node:20-alpine AS build
 
-# Set the working folder required by the assignment
-WORKDIR /jiang_haley_ui_garden
+# Required assignment working directory
+WORKDIR /jiang_haley_ui_garden_build_checks
 
-# Copy package files first
-COPY package*.json ./
+# Copy dependency files first
+COPY package.json package-lock.json ./
 
-# Install project dependencies
+# Install dependencies for the existing CRA and Storybook project
 RUN npm install
 
-# Copy all project files
+# Copy the project files
 COPY . .
 
-# Build the React production files
+# Run Prettier, ESLint, and all tests
+RUN npm run quality
+
+# Create the production build
 RUN npm run build
 
-# Use nginx to host the production build
+# Host the production build with Nginx
 FROM nginx:alpine
 
-# Copy React build files to nginx html folder
-COPY --from=build /jiang_haley_ui_garden/build /usr/share/nginx/html
+# Keep the site files in the required directory
+WORKDIR /jiang_haley_ui_garden_build_checks
 
-# nginx runs on port 80 inside the container
+# Copy the final React build
+COPY --from=build /jiang_haley_ui_garden_build_checks/build ./
+
+# Copy the site files to the Nginx website folder
+RUN rm -rf /usr/share/nginx/html/* \
+    && cp -r /jiang_haley_ui_garden_build_checks/* /usr/share/nginx/html/
+
+# Nginx uses port 80 inside the container
 EXPOSE 80
 
-# Start nginx
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,125 +1,113 @@
-# Assignment 12: Web Component Library
+# Assignment 13 - UI Component Library Build Checks
 
-## Project Name
+This project is based onAssignment 12
 
-jiang_haley_ui_garden
+For Assignment 13, I added code quality checks to the existing build process. The project uses Prettier, ESLint, tests, Husky, GitHub Actions, Docker, and Nginx.
 
-## Container Name
+## Project Requirements
 
-jiang_haley_coding_assignment12
+The project uses these assignment values:
 
-each folder have
-ComponentName.tsx
-ComponentName.stories.tsx
-ComponentName.types.tsx
-ComponentName.tests.tsx
-ComponentName.test.tsx
-(for test only)
-index.ts
+Container name: jiang_haley_coding_assignment13
+Working directory: /jiang_haley_ui_garden_build_checks
+Localhost port: 8018
 
-The components include a default state and a disabled state. When disabled, the component changes color and the cursor shows that the user cannot click it.
+## Install the Project
 
-## Run the Project Locally Without Docker
+Make sure Node.js, npm, Git, and Docker Desktop are installed.
 
-Install dependencies:
+Open a terminal in the project folder and install the dependencies:
 
-npm install
+npm install --legacy-peer-deps
 
-Start the React app:
+## Run the Development Application
 
 npm start
 
-Open the app in the browser:
-
-http://localhost:3000
-
-## Run Storybook Locally
-
-Start Storybook:
+## Run Storybook
 
 npm run storybook
 
-Open Storybook in the browser:
+## Run Prettier
 
-http://localhost:6006
+Check the formatting:
+
+npm run format:check
+
+Automatically fix the formatting:
+
+npm run format
+
+## Run ESLint
+
+npm run lint
 
 ## Run Tests
 
-Run all tests:
+npm run test:ci
 
-npm test
+## Run All Code Quality Checks
 
-This runs all test files.
+npm run quality
 
-Each component has at least two tests:
+The quality command runs:
 
-1. A test that checks if the component is visible.
-2. A test that checks if the background color changes when the component is disabled.
+1. Prettier
+2. ESLint
+3. All tests
 
-## Build the React App
+If one check fails, the process stops.
 
-Create the production build:
+## Husky Pre-commit Check
 
-npm run build
+Husky runs the quality command before a Git commit is accepted:
 
-## Run the Project With Docker
+npm run quality
 
-Make sure Docker Desktop is running first.
+Example:
 
-Build the Docker image:
+git add .
+git commit -m "Update project"
 
-docker build -t jiang_haley_ui_garden .
+If Prettier, ESLint, or any test fails, the commit is stopped.
 
-Create and run the container:
+## Build the Docker Image
 
-docker run --name jiang_haley_coding_assignment12 -d -p 8083:80 jiang_haley_ui_garden
+Make sure Docker Desktop is running.
 
-Open the site in the browser:
+Run this command from the project folder:
 
-http://localhost:8083
+docker build -t jiang_haley_assignment13 .
 
-## Stop the Docker Container
+The Dockerfile runs the quality checks, creates a production build, and uses Nginx to host the final application.
 
-Stop the container:
+## Run the Docker Container
 
-docker stop jiang_haley_coding_assignment12
+Create the container with the required name and port:
 
-Remove the container:
+docker run -d --name jiang_haley_coding_assignment13 -p 8018:80 jiang_haley_assignment13
 
-docker rm jiang_haley_coding_assignment12
+Open at:
 
-## Rebuild the Docker Container
+http://localhost:8018
 
-If the code changes, rebuild the image:
+## Check the Running Container
 
-docker build -t jiang_haley_ui_garden .
+docker ps
 
-Run the container again:
+The result should show the container name and port mapping:
 
-docker run --name jiang_haley_coding_assignment12 -d -p 8083:80 jiang_haley_ui_garden
+jiang_haley_coding_assignment13
+8018 -> 80
 
-## Steps
+## Stop the Container
 
-1. Created a React TypeScript project named `jiang_haley_ui_garden`.
+docker stop jiang_haley_coding_assignment13
 
-2. Installed Storybook for showing UI components.
+## Start the Container Again
 
-3. Installed styled-components for component styling.
+docker start jiang_haley_coding_assignment13
 
-4. Installed testing tools for checking styled-components CSS.
+## Remove the Container
 
-5. Created a `components` folder inside `src`.
-
-6. Created component folders for the UI component library.
-
-7. Added TypeScript props files for component properties.
-
-8. Added styled-components CSS inside each component.
-
-9. Added Storybook stories with controls for text, background color, and disabled state.
-
-10. Added tests to check visibility and disabled background color.
-
-11. Created a Dockerfile to host the React production build.
-
-12. Created this README with instructions for running the project on port `8083`.
+docker rm -f jiang_haley_coding_assignment13

@@ -21,10 +21,11 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <h1>Assignment 12: Web Component Library</h1>
+      <h1>Assignment 13: UI Component Library Build Checks</h1>
 
-      <p className="intro">
-        This page shows the React component library built with Storybook and styled-components.
+      <p>
+        This page shows the React component library with Prettier, ESLint, tests, Husky, GitHub
+        Actions, and Docker.
       </p>
 
       <section className="component-section">
