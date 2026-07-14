@@ -16,7 +16,6 @@ COPY . .
 # Build the React production files
 RUN npm run build
 
-
 # Use nginx to host the production build
 FROM nginx:alpine
 

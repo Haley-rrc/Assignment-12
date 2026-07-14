@@ -1,2 +1,2 @@
 // run Text tests
-import './Text.tests';
+import "./Text.tests";

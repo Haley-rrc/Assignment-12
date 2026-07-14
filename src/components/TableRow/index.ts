@@ -1,2 +1,2 @@
 // export TableRow component
-export { default } from './TableRow';
+export { default } from "./TableRow";

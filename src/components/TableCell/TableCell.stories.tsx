@@ -1,17 +1,17 @@
 // import Storybook types
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 // import TableCell component
-import TableCell from './TableCell';
+import TableCell from "./TableCell";
 
 // Storybook setting for TableCell
 const meta: Meta<typeof TableCell> = {
-  title: 'Components/TableCell',
+  title: "Components/TableCell",
   component: TableCell,
   argTypes: {
-    text: { control: 'text' },
-    backgroundColor: { control: 'color' },
-    disabled: { control: 'boolean' },
+    text: { control: "text" },
+    backgroundColor: { control: "color" },
+    disabled: { control: "boolean" },
   },
 };
 
@@ -22,8 +22,8 @@ type Story = StoryObj<typeof TableCell>;
 // Default TableCell story
 export const Default: Story = {
   args: {
-    text: 'Default Cell',
-    backgroundColor: '#ffffff',
+    text: "Default Cell",
+    backgroundColor: "#ffffff",
     disabled: false,
   },
 };
@@ -31,8 +31,8 @@ export const Default: Story = {
 // Disabled TableCell story
 export const Disabled: Story = {
   args: {
-    text: 'Disabled Cell',
-    backgroundColor: '#ffffff',
+    text: "Disabled Cell",
+    backgroundColor: "#ffffff",
     disabled: true,
   },
 };

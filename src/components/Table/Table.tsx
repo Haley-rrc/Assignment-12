@@ -1,17 +1,17 @@
 // import styled-components
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // import Table props type
-import { TableProps } from './Table.types';
+import { TableProps } from "./Table.types";
 
 // styled table with CSS
 const StyledTable = styled.table<TableProps>`
   width: 100%;
   border-collapse: collapse;
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor || '#ffffff'};
-  color: ${(props) => (props.disabled ? '#666666' : '#222222')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
+    props.disabled ? "#cccccc" : props.backgroundColor || "#ffffff"};
+  color: ${(props) => (props.disabled ? "#666666" : "#222222")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
 
   @media (max-width: 600px) {
     font-size: 14px;
@@ -25,8 +25,8 @@ const StyledCaption = styled.caption`
 
 // Table component
 function Table({
-  caption = 'Student Table',
-  backgroundColor = '#ffffff',
+  caption = "Student Table",
+  backgroundColor = "#ffffff",
   disabled = false,
   children,
 }: TableProps) {

@@ -1,18 +1,18 @@
 // import Storybook types
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 // import Card component
-import Card from './Card';
+import Card from "./Card";
 
 // Storybook setting for Card
 const meta: Meta<typeof Card> = {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
   argTypes: {
-    title: { control: 'text' },
-    content: { control: 'text' },
-    backgroundColor: { control: 'color' },
-    disabled: { control: 'boolean' },
+    title: { control: "text" },
+    content: { control: "text" },
+    backgroundColor: { control: "color" },
+    disabled: { control: "boolean" },
   },
 };
 
@@ -23,9 +23,9 @@ type Story = StoryObj<typeof Card>;
 // Default Card story
 export const Default: Story = {
   args: {
-    title: 'Default Card',
-    content: 'This is the default card.',
-    backgroundColor: '#ffffff',
+    title: "Default Card",
+    content: "This is the default card.",
+    backgroundColor: "#ffffff",
     disabled: false,
   },
 };
@@ -33,9 +33,9 @@ export const Default: Story = {
 // Disabled Card story
 export const Disabled: Story = {
   args: {
-    title: 'Disabled Card',
-    content: 'This card is disabled.',
-    backgroundColor: '#ffffff',
+    title: "Disabled Card",
+    content: "This card is disabled.",
+    backgroundColor: "#ffffff",
     disabled: true,
   },
 };

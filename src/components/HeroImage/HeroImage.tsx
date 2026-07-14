@@ -1,8 +1,8 @@
 // import styled-components
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // import HeroImage props type
-import { HeroImageProps } from './HeroImage.types';
+import { HeroImageProps } from "./HeroImage.types";
 
 // styled hero section
 const StyledHero = styled.section<HeroImageProps>`
@@ -10,13 +10,13 @@ const StyledHero = styled.section<HeroImageProps>`
   padding: 40px;
   border-radius: 10px;
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor || '#333333'};
+    props.disabled ? "#cccccc" : props.backgroundColor || "#333333"};
   background-image: ${(props) =>
-    props.disabled ? 'none' : `url(${props.imageUrl})`};
+    props.disabled ? "none" : `url(${props.imageUrl})`};
   background-size: cover;
   background-position: center;
-  color: ${(props) => (props.disabled ? '#666666' : '#ffffff')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
+  color: ${(props) => (props.disabled ? "#666666" : "#ffffff")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,10 +46,10 @@ const HeroSubtitle = styled.p`
 
 // HeroImage component
 function HeroImage({
-  title = 'Hero Image',
-  subtitle = 'This is a hero image component.',
-  imageUrl = 'https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg',
-  backgroundColor = '#333333',
+  title = "Hero Image",
+  subtitle = "This is a hero image component.",
+  imageUrl = "https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2022/05/NEP11058272.jpg",
+  backgroundColor = "#333333",
   disabled = false,
 }: HeroImageProps) {
   return (

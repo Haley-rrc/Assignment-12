@@ -1,8 +1,11 @@
 # Assignment 12: Web Component Library
 
 ## Project Name
+
 jiang_haley_ui_garden
+
 ## Container Name
+
 jiang_haley_coding_assignment12
 
 each folder have
@@ -14,9 +17,7 @@ ComponentName.test.tsx
 (for test only)
 index.ts
 
-
 The components include a default state and a disabled state. When disabled, the component changes color and the cursor shows that the user cannot click it.
-
 
 ## Run the Project Locally Without Docker
 
@@ -27,7 +28,6 @@ npm install
 Start the React app:
 
 npm start
-
 
 Open the app in the browser:
 
@@ -48,10 +48,6 @@ http://localhost:6006
 Run all tests:
 
 npm test
-
-Press:
-
-a
 
 This runs all test files.
 

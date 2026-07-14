@@ -10,5 +10,4 @@ export interface ButtonProps {
 
   onClick?: () => void;
   // when click button
-
 }

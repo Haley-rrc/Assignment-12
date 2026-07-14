@@ -1,2 +1,2 @@
 // export TableHeader component
-export { default } from './TableHeader';
+export { default } from "./TableHeader";

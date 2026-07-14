@@ -1,2 +1,2 @@
 // export Img component
-export { default } from './Img';
+export { default } from "./Img";

@@ -1,2 +1,2 @@
 // run TableFooter tests
-import './TableFooter.tests';
+import "./TableFooter.tests";

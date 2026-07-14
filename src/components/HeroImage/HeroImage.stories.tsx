@@ -1,19 +1,19 @@
 // import Storybook types
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 // import HeroImage component
-import HeroImage from './HeroImage';
+import HeroImage from "./HeroImage";
 
 // Storybook setting for HeroImage
 const meta: Meta<typeof HeroImage> = {
-  title: 'Components/HeroImage',
+  title: "Components/HeroImage",
   component: HeroImage,
   argTypes: {
-    title: { control: 'text' },
-    subtitle: { control: 'text' },
-    imageUrl: { control: 'text' },
-    backgroundColor: { control: 'color' },
-    disabled: { control: 'boolean' },
+    title: { control: "text" },
+    subtitle: { control: "text" },
+    imageUrl: { control: "text" },
+    backgroundColor: { control: "color" },
+    disabled: { control: "boolean" },
   },
 };
 
@@ -24,10 +24,11 @@ type Story = StoryObj<typeof HeroImage>;
 // Default HeroImage story
 export const Default: Story = {
   args: {
-    title: 'Default Hero',
-    subtitle: 'This is the default hero image.',
-    imageUrl: 'https://via.placeholder.com/900x400',
-    backgroundColor: '#333333',
+    title: "Default Hero",
+    subtitle: "This is the default hero image.",
+    imageUrl:
+      "https://www.rrc.ca/wp-content/uploads/sites/1/2021/10/RRC-NDC_Exterior-0557-web_banner.jpg",
+    backgroundColor: "#333333",
     disabled: false,
   },
 };
@@ -35,10 +36,11 @@ export const Default: Story = {
 // Disabled HeroImage story
 export const Disabled: Story = {
   args: {
-    title: 'Disabled Hero',
-    subtitle: 'This hero image is disabled.',
-    imageUrl: 'https://via.placeholder.com/900x400',
-    backgroundColor: '#333333',
+    title: "Disabled Hero",
+    subtitle: "This hero image is disabled.",
+    imageUrl:
+      "https://www.rrc.ca/wp-content/uploads/sites/1/2021/10/RRC-NDC_Exterior-0557-web_banner.jpg",
+    backgroundColor: "#333333",
     disabled: true,
   },
 };
