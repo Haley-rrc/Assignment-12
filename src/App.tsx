@@ -31,7 +31,7 @@ function App() {
       <section className="component-section">
         <h2>Basic Components</h2>
 
-        <Button label="Default Button" backgroundColor="#000 />
+        <Button label="Default Button" backgroundColor="#000" />
 
         <Button label="Disabled Button" disabled />
 
