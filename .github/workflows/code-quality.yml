@@ -1,0 +1,55 @@
+name: Code Quality Checks
+
+# Run checks for every push and pull request
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality-checks:
+    name: Prettier ESLint Tests and Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Download the project files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Use Node.js 20
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # Use the same npm version as the local project
+      - name: Set up npm
+        run: npm install -g npm@11.13.0
+
+      # Show versions in the workflow log
+      - name: Check versions
+        run: |
+          node --version
+          npm --version
+
+      # Install dependencies for the existing CRA project
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps --ignore-scripts --no-audit --no-fund
+
+      # Check formatting
+      - name: Run Prettier check
+        run: npm run format:check
+
+      # Check the source code
+      - name: Run ESLint
+        run: npm run lint
+
+      # Run all tests
+      - name: Run tests
+        run: npm run test:ci
+
+      # Confirm the production build works
+      - name: Create production build
+        run: npm run build
+        env:
+          CI: false
